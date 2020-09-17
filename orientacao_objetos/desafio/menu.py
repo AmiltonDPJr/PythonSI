@@ -81,17 +81,18 @@ class Menu:
         # numero, data, hora, local, pauta, redator, integrantes, texto, validada (CRUD)
         
         numero = int(input('Numero: '))
-        data = datetime.now()
+        data = "{:%d/%m/%Y}".format(datetime.now())
         local = input('Local: ')
         local = local.upper()
         pauta = input('Pauta: ')
         pauta = pauta.upper()
+        hora = "{:%H:%M}".format(datetime.now())
         redator = input('Redator: ')
         integrantes = input('Integrantes: ')
         texto = input('Texto: ')
         validada = input('Validada: ')
 
-        lista.append(Ata(numero, "{:%d/%m/%Y}".format(data), "{:%H:%M}".format(data), local, pauta))
+        lista.append(Ata(numero, data, hora, local, pauta))
         print('Ata %s cadastrado com sucesso' % (lista[-1]))
         Menu.pegar_tecla('Tecle Enter para continuar...')
 
