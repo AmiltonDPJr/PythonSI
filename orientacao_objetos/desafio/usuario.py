@@ -2,7 +2,7 @@ class Usuario:
     def __init__(self, matricula, nome, tipo, email):
         self.matricula = matricula
         self.nome = nome
-        self.tipo = tipo #Leitor ou Redator
+        self.tipo = tipo #Leitor ouu Redator
         self.email = email
         
     def __str__(self):
